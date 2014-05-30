@@ -23,3 +23,18 @@ var uniqueChars = function(string){
 		return true;
 	}
 };
+
+var uniqueCharsInPlace = function(string){
+	if(typeof string !== 'string'){
+		throw new Error();
+	} else {
+		for(var i = 0; i < string.length; i++){
+			for(var j = 0; j < string.length; j++){
+				if(i !== j && string[i] === string[j]){
+					return false;
+				}
+			}
+		}
+	}
+	return true;
+};
