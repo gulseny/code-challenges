@@ -42,3 +42,20 @@ var uniqueCharsInPlace = function(string){
 };
 
 // notes to self: clarify if case matters
+
+//alternative way
+// time complexity: O(n) space complexity: O(n)
+var uniqueChars = function(string){
+	if(typeof string !== 'string'){
+		throw new Error();
+	} else {
+		var values = new Array(256);
+		for(var i = 0; i < string.length; i++){
+			if(values[string.charCodeAt(i)]){
+				return false;
+			}
+			values[string.charCodeAt(i)] = true;
+		}
+		return true;
+	}
+};
