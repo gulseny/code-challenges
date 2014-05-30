@@ -2,6 +2,7 @@
 
 // Extra credit: don't use additional data structures
 
+// time complexity: O(n) space complexity: O(n)
 var uniqueChars = function(string){
 	if (typeof string !== 'string') {
 		throw new Error();
@@ -24,6 +25,7 @@ var uniqueChars = function(string){
 	}
 };
 
+// time complexity: O(n * n) space complexity: O(1)
 var uniqueCharsInPlace = function(string){
 	if(typeof string !== 'string'){
 		throw new Error();
@@ -38,3 +40,5 @@ var uniqueCharsInPlace = function(string){
 	}
 	return true;
 };
+
+// notes to self: clarify if case matters
